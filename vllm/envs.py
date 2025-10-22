@@ -215,6 +215,7 @@ if TYPE_CHECKING:
     VLLM_NCCL_INCLUDE_PATH: str | None = None
     VLLM_USE_FBGEMM: bool = False
     VLLM_GC_DEBUG: str = ""
+    VLLM_ENABLE_MOE_EXPERT_TRACKING: bool = False
 
 
 def get_default_cache_root():
@@ -1400,6 +1401,14 @@ environment_variables: dict[str, Callable[[], Any]] = {
     # - VLLM_GC_DEBUG='{"top_objects":5}': enable GC debugger with
     #                                      top 5 collected objects
     "VLLM_GC_DEBUG": lambda: os.getenv("VLLM_GC_DEBUG", ""),
+    # Flag to enable tracking of MoE expert selections
+    # If enabled, vLLM will record which experts are selected by each token
+    # at each MoE layer and return this information in the RequestOutput.
+    # This is useful for analyzing MoE routing behavior.
+    # Note: Enabling this feature has a slight performance overhead (~1-3%).
+    "VLLM_ENABLE_MOE_EXPERT_TRACKING": lambda: bool(
+        int(os.getenv("VLLM_ENABLE_MOE_EXPERT_TRACKING", "0"))
+    ),
 }
 
 # --8<-- [end:env-vars-definition]

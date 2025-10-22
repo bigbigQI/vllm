@@ -641,6 +641,12 @@ class UnquantizedFusedMoEMethod(FusedMoEMethodBase, CustomOp):
             num_fused_shared_experts=layer.num_fused_shared_experts,
         )
 
+        # Record expert selections for tracking (if enabled)
+        self._maybe_record_expert_selections(
+            layer=layer,
+            topk_ids=topk_ids,
+        )
+
         if self.rocm_aiter_moe_enabled:
             assert self.fused_experts is None
             result = self.rocm_aiter_fused_experts(
@@ -849,6 +855,46 @@ class UnquantizedFusedMoEMethod(FusedMoEMethodBase, CustomOp):
             expert_map=expert_map,
             renormalize=renormalize,
         )
+
+    def _maybe_record_expert_selections(
+        self,
+        layer: torch.nn.Module,
+        topk_ids: torch.Tensor,
+    ) -> None:
+        """Record expert selections if tracking is enabled.
+
+        This method captures which experts were selected at this
+        MoE layer and records it in the forward context for later retrieval.
+
+        Args:
+            layer: The MoE layer module (contains layer_name attribute).
+            topk_ids: The selected expert IDs [num_tokens, top_k].
+        """
+        # IMPORTANT: Read from environment variable directly to avoid CUDA Graph capture issues
+        # During CUDA Graph capture, the forward_context.track_expert_selections might be False,
+        # and that False value gets baked into the graph. By reading env var directly,
+        # we ensure the check happens at runtime, not at capture time.
+        import vllm.envs as envs
+
+        if not envs.VLLM_ENABLE_MOE_EXPERT_TRACKING:
+            return
+
+        from vllm.forward_context import get_forward_context
+
+        try:
+            ctx = get_forward_context()
+        except AssertionError:
+            # Forward context not set (e.g., during initialization)
+            return
+
+        # Get layer name
+        layer_name = getattr(layer, "layer_name", "unknown_moe_layer")
+
+        ctx.record_expert_selection(
+            layer_name=layer_name,
+            expert_ids=topk_ids,
+        )
+
 
     if current_platform.is_tpu():
         forward_native = forward_tpu

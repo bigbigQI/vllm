@@ -208,10 +208,60 @@ class ForwardContext:
 
     ubatch_slices: UBatchSlices | None = None
 
+    # MoE expert selection tracking (when enabled)
+    # Maps layer_name -> List[expert_ids] (按顺序存储每个token的expert选择)
+    # prefill阶段: 一次记录n个tokens的expert_ids
+    # decode阶段: 每次记录1个token的expert_ids
+    moe_expert_selections: dict[str, list] | None = None
+    # Whether to track expert selections (read from environment variable)
+    track_expert_selections: bool = False
+
     def __post_init__(self):
         assert self.cudagraph_runtime_mode.valid_runtime_modes(), (
             f"Invalid cudagraph runtime mode: {self.cudagraph_runtime_mode}"
         )
+
+    def record_expert_selection(
+        self,
+        layer_name: str,
+        expert_ids: torch.Tensor,
+    ) -> None:
+        """Record expert selection for a layer.
+
+        Args:
+            layer_name: The name of the MoE layer (e.g., "model.layers.5.mlp").
+            expert_ids: Selected expert IDs tensor [num_tokens, top_k].
+                       prefill阶段: [n, top_k], decode阶段: [1, top_k]
+        """
+        if not self.track_expert_selections:
+            return
+        
+        if self.moe_expert_selections is None:
+            self.moe_expert_selections = {}
+
+        if layer_name not in self.moe_expert_selections:
+            self.moe_expert_selections[layer_name] = []
+
+        if layer_name == "model.layers.0.mlp.experts":
+            print(f"[lark] expert_ids.shape: {expert_ids.shape}")
+        expert_ids_list = expert_ids.cpu().tolist()
+        
+        # self.moe_expert_selections[layer_name].extend(expert_ids_list)
+        self.moe_expert_selections[layer_name] = expert_ids_list
+
+    def get_and_clear_expert_selections(
+        self,
+    ) -> dict[str, list[list[int]]] | None:
+        """Get and clear expert selection records.
+        
+        Returns:
+            dict mapping layer_name to list of expert_ids for each token.
+            Format: {layer_name: [[expert_id1, expert_id2, ...], ...]}
+            按顺序记录的每个token的expert选择。
+        """
+        selections = self.moe_expert_selections
+        self.moe_expert_selections = None
+        return selections
 
 
 _forward_context: ForwardContext | None = None
@@ -234,6 +284,7 @@ def create_forward_context(
     cudagraph_runtime_mode: CUDAGraphMode = CUDAGraphMode.NONE,
     batch_descriptor: BatchDescriptor | None = None,
     ubatch_slices: UBatchSlices | None = None,
+    track_expert_selections: bool = False,
 ):
     return ForwardContext(
         no_compile_layers=vllm_config.compilation_config.static_forward_context,
@@ -243,6 +294,7 @@ def create_forward_context(
         cudagraph_runtime_mode=cudagraph_runtime_mode,
         batch_descriptor=batch_descriptor,
         ubatch_slices=ubatch_slices,
+        track_expert_selections=track_expert_selections,
     )
 
 
@@ -271,6 +323,7 @@ def set_forward_context(
     cudagraph_runtime_mode: CUDAGraphMode = CUDAGraphMode.NONE,
     batch_descriptor: BatchDescriptor | None = None,
     ubatch_slices: UBatchSlices | None = None,
+    track_expert_selections: bool = False,
 ):
     """A context manager that stores the current forward context,
     can be attention metadata, etc.
@@ -316,6 +369,7 @@ def set_forward_context(
         cudagraph_runtime_mode,
         batch_descriptor,
         ubatch_slices,
+        track_expert_selections,
     )
 
     try:

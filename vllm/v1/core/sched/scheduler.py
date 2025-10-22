@@ -1035,6 +1035,7 @@ class Scheduler(SchedulerInterface):
                         kv_transfer_params=kv_transfer_params,
                         trace_headers=request.trace_headers,
                         num_cached_tokens=request.num_cached_tokens,
+                        moe_expert_selections=model_runner_output.moe_expert_selections,
                     )
                 )
             else:

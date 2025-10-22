@@ -120,6 +120,13 @@ class RequestState:
 
         self.stats = RequestStateStats(arrival_time=arrival_time) if log_stats else None
 
+        # MoE expert selections: token_index -> layer_name -> expert_ids
+        self.moe_expert_selections: dict[int, dict[str, list[int]]] = {}
+        
+        # Token counter for MoE tracking (用于自动计算token index)
+        # 记录当前已累积的tokens数量
+        self._moe_token_counter: dict[str, int] = {}  # layer_name -> accumulated_token_count
+
     @classmethod
     def from_new_request(
         cls,
@@ -255,6 +262,7 @@ class RequestState:
             kv_transfer_params=kv_transfer_params,
             num_cached_tokens=self.num_cached_tokens,
             metrics=self.stats,
+            moe_expert_selections=self.moe_expert_selections if self.moe_expert_selections else None,
         )
 
     def _new_completion_output(
@@ -429,6 +437,25 @@ class OutputProcessor:
             req_state.num_cached_tokens = engine_core_output.num_cached_tokens
             req_state.is_prefilling = False
 
+            if engine_core_output.moe_expert_selections:
+                for layer_name, expert_ids_list in engine_core_output.moe_expert_selections.items():
+                    # 获取当前layer已累积的token数量
+                    if layer_name not in req_state._moe_token_counter:
+                        req_state._moe_token_counter[layer_name] = 0
+                    
+                    start_token_idx = req_state._moe_token_counter[layer_name]
+                    
+                    # 按顺序添加每个token的expert_ids
+                    for i, expert_ids in enumerate(expert_ids_list):
+                        token_idx = start_token_idx + i
+                        if token_idx not in req_state.moe_expert_selections:
+                            req_state.moe_expert_selections[token_idx] = {}
+                        req_state.moe_expert_selections[token_idx][layer_name] = expert_ids
+                    
+                    # 更新counter
+                    req_state._moe_token_counter[layer_name] += len(expert_ids_list)
+
+            
             if pooling_output is None:
                 assert req_state.detokenizer is not None
                 assert req_state.logprobs_processor is not None

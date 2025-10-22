@@ -122,6 +122,11 @@ class EngineCoreOutput(
     # The number of tokens with prefix cache hits.
     num_cached_tokens: int = 0
 
+    # MoE expert selections for this output (single forward pass)
+    # Maps layer_name -> List[expert_ids] (按顺序存储每个token的expert选择)
+    # 格式: {layer_name: [[expert_id1, expert_id2], [expert_id3, expert_id4], ...]}
+    moe_expert_selections: dict[str, list[list[int]]] | None = None
+
     @property
     def finished(self) -> bool:
         return self.finish_reason is not None

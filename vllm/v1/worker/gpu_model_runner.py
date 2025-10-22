@@ -2490,8 +2490,14 @@ class GPUModelRunner(LoRAModelRunnerMixin, KVConnectorModelRunnerMixin):
             ):
                 cudagraph_runtime_mode = CUDAGraphMode.NONE
 
+        # Check if MoE expert tracking is enabled
+        import vllm.envs as envs
+
+        track_expert_selections = envs.VLLM_ENABLE_MOE_EXPERT_TRACKING
+
         # Run the model.
         # Use persistent buffers for CUDA graphs.
+        moe_expert_selections = None
         with (
             set_forward_context(
                 attn_metadata,
@@ -2501,6 +2507,7 @@ class GPUModelRunner(LoRAModelRunnerMixin, KVConnectorModelRunnerMixin):
                 cudagraph_runtime_mode=cudagraph_runtime_mode,
                 batch_descriptor=batch_descriptor,
                 ubatch_slices=ubatch_slices,
+                track_expert_selections=track_expert_selections,
             ),
             record_function_or_nullcontext("Forward"),
             self.maybe_get_kv_connector_output(scheduler_output) as kv_connector_output,
@@ -2512,6 +2519,13 @@ class GPUModelRunner(LoRAModelRunnerMixin, KVConnectorModelRunnerMixin):
                 inputs_embeds=inputs_embeds,
                 **model_kwargs,
             )
+
+            # Extract expert selections if tracking is enabled
+            if track_expert_selections:
+                from vllm.forward_context import get_forward_context
+                ctx = get_forward_context()
+                moe_expert_selections = ctx.get_and_clear_expert_selections()
+                print(f"[lark] sample moe_expert_selections['model.layers.0.mlp.experts'] shape: {len(moe_expert_selections['model.layers.0.mlp.experts'])}")
 
         with record_function_or_nullcontext("Postprocess"):
             if self.use_aux_hidden_state_outputs:
@@ -2655,6 +2669,7 @@ class GPUModelRunner(LoRAModelRunnerMixin, KVConnectorModelRunnerMixin):
             pooler_output=[],
             kv_connector_output=kv_connector_output,
             num_nans_in_logits=num_nans_in_logits,
+            moe_expert_selections=moe_expert_selections,
         )
 
         if not self.use_async_scheduling:
