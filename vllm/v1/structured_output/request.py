@@ -23,6 +23,20 @@ class StructuredOutputRequest:
                              StructuredOutputGrammar]] = None
     reasoning_ended: Optional[bool] = None
 
+    @staticmethod
+    def from_sampling_params(
+        sampling_params: SamplingParams | None,
+    ) -> "StructuredOutputRequest | None":
+        if sampling_params is None:
+            return None
+        params = sampling_params.structured_outputs
+        if params:
+            if params.all_constraints_none():
+                return None
+            else:
+                return StructuredOutputRequest(params=params)
+        return None
+
     def _check_grammar_completion(self) -> bool:
         # NOTE: We have to lazy import to gate circular imports
         from vllm.v1.request import RequestStatus
