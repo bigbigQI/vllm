@@ -11,6 +11,17 @@ A custom KV connector that enables loading pre-computed KV cache from local file
 - ✅ Compatible with vLLM v1 architecture
 - ✅ Support multiple KV cache layouts (Flash Attention, FlashInfer)
 
+## Available Scripts
+
+This package includes several utility scripts:
+
+1. **`save_cache_logprob.py`** - Run inference with KV cache and save response logprobs to JSON
+2. **`compare_logprob_between_kvcache.py`** - Compare logprobs between cached and non-cached inference
+3. **`view_logprob_json.py`** - View and analyze saved logprob JSON files
+4. **`prepare_kv_cache.py`** - Generate KV cache files from prompts
+5. **`test_connector.py`** - Comprehensive test suite for the connector
+6. **`simple_test.py`** - Simple sanity test without requiring a model
+
 ## Quick Start
 
 ### 1. Installation
@@ -370,6 +381,104 @@ outputs = llm.generate(full_prompt, SamplingParams(
 ))
 ```
 
+## Advanced Usage
+
+### Saving Response Logprobs to JSON
+
+Use `save_cache_logprob.py` to extract detailed token information from KV-cached inference:
+
+```bash
+python save_cache_logprob.py \
+    --model /apps/models/Qwen3-8B-Base \
+    --cache-file kv_cache.pt \
+    --output response_logprobs.json \
+    --max-tokens 20 \
+    --temperature 0.0
+```
+
+**Output JSON format:**
+```json
+{
+  "metadata": {
+    "model": "/apps/models/Qwen3-8B-Base",
+    "num_cached_tokens": 150,
+    "generated_text": "The complete response...",
+    "inference_time_seconds": 1.234
+  },
+  "response_tokens": [
+    {
+      "index": 0,
+      "token_id": 3491,
+      "token": "problem",
+      "log_prob": -0.435546875,
+      "prob": 0.6484375
+    },
+    ...
+  ]
+}
+```
+
+**View saved logprobs:**
+```bash
+# View as table
+python view_logprob_json.py response_logprobs.json
+
+# View as JSON
+python view_logprob_json.py response_logprobs.json --format json
+
+# Show statistics
+python view_logprob_json.py response_logprobs.json --no-metadata
+
+# Limit tokens displayed
+python view_logprob_json.py response_logprobs.json --max-tokens 10
+```
+
+### Comparing Logprobs (With vs Without Cache)
+
+Use `compare_logprob_between_kvcache.py` to verify cache correctness:
+
+```bash
+python compare_logprob_between_kvcache.py \
+    --model /apps/models/Qwen3-8B-Base \
+    --cache-file kv_cache.pt \
+    --prompt "Your prompt here"
+```
+
+This will:
+1. Run baseline inference (without cache)
+2. Run cached inference (with cache)
+3. Compare logprobs token-by-token
+4. Report any differences
+
+**Expected output:**
+```
+RESPONSE TOKENS COMPARISON
+==========================
+Token ID   Word                           With Cache      Without Cache   Diff         Match
+----------------------------------------------------------------------------------------
+3491       problem                        -0.435547       -0.435547       0.00e+00     ✓
+374        step                           -0.123457       -0.123457       0.00e+00     ✓
+...
+
+SUMMARY
+=======
+Response logprobs match: ✓ Yes (max diff: 0.00e+00)
+Overall result: ✓ PASS - KV cache produces identical response logprobs!
+```
+
+### Quick Scripts
+
+**Quick test with default settings:**
+```bash
+bash quick_test_save_logprob.sh
+```
+
+**Set custom paths:**
+```bash
+MODEL=/path/to/model CACHE_FILE=/path/to/cache.pt OUTPUT=my_output.json \
+    bash quick_test_save_logprob.sh
+```
+
 ## Limitations
 
 1. **Block Alignment**: Only full blocks can be cached efficiently
@@ -377,6 +486,7 @@ outputs = llm.generate(full_prompt, SamplingParams(
 3. **Single File**: Each request uses one cache file (no merging)
 4. **V1 Only**: Currently only works with vLLM v1 architecture
 5. **Synchronous Loading**: KV loading is synchronous (future: async)
+6. **Prompt Logprobs Unavailable**: Cannot compute logprobs for externally loaded cached tokens (only response logprobs available)
 
 ## Future Enhancements
 
