@@ -18,7 +18,7 @@ from datetime import datetime
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-
+# sys.path.append(str(Path(__file__).parent.parent))
 # Register the connector
 import custom_kv_connector.register_connector  # noqa: F401
 
@@ -62,9 +62,6 @@ def inference_with_cache(
                 "kv_cache_dir": str(Path(kv_cache_file).parent)
             }
         },
-        hf_overrides={
-            "head_dtype": "float32"
-        }
     )
     
     sampling_params = SamplingParams(
@@ -223,6 +220,9 @@ def main():
     print("\n" + "="*60)
     print("KV Cache Inference - Save Token/Logprob Script")
     print("="*60)
+
+    import os 
+    os.environ["VLLM_BATCH_INVARIANT"] = "1"
     
     try:
         # Verify cache file exists

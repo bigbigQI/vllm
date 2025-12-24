@@ -1,0 +1,1842 @@
+{
+  "input_token_ids": [
+    50,
+    3948,
+    279,
+    2701,
+    6888,
+    3491,
+    3019,
+    553,
+    3019,
+    13,
+    576,
+    1537,
+    1555,
+    315,
+    697,
+    2033,
+    1265,
+    387,
+    315,
+    279,
+    1352,
+    21806,
+    25,
+    400,
+    16141,
+    320,
+    28996,
+    17194,
+    8,
+    1380,
+    400,
+    16141,
+    374,
+    279,
+    4226,
+    311,
+    279,
+    3491,
+    382,
+    641,
+    21495,
+    400,
+    25411,
+    54876,
+    57960,
+    15940,
+    1124,
+    4044,
+    362,
+    284,
+    1124,
+    37018,
+    90,
+    19,
+    15170,
+    20,
+    31716,
+    323,
+    57960,
+    4044,
+    362,
+    366,
+    220,
+    24,
+    15,
+    24884,
+    43298,
+    12947,
+    6771,
+    400,
+    35,
+    3,
+    387,
+    264,
+    1459,
+    4889,
+    21495,
+    400,
+    25411,
+    3,
+    1741,
+    429,
+    57960,
+    4044,
+    47718,
+    284,
+    1124,
+    4044,
+    39196,
+    3,
+    323,
+    57960,
+    4044,
+    425,
+    5626,
+    284,
+    220,
+    24,
+    15,
+    24884,
+    43298,
+    12947,
+    82610,
+    429,
+    400,
+    1808,
+    284,
+    220,
+    16,
+    3,
+    323,
+    429,
+    57960,
+    37018,
+    90,
+    9548,
+    15170,
+    6484,
+    92,
+    284,
+    1124,
+    37018,
+    90,
+    18,
+    15170,
+    17,
+    92,
+    12947,
+    220,
+    7379,
+    400,
+    6484,
+    3,
+    624,
+    8304,
+    220,
+    16,
+    25,
+    220,
+    2014,
+    11625,
+    419,
+    3491,
+    11,
+    582,
+    1184,
+    311,
+    990,
+    279,
+    2661,
+    1995,
+    911,
+    279,
+    21495,
+    323,
+    279,
+    1459,
+    400,
+    35,
+    3,
+    311,
+    1477,
+    279,
+    3084,
+    315,
+    400,
+    6484,
+    3,
+    624,
+    8304,
+    220,
+    17,
+    25,
+    220,
+    1205,
+    525,
+    2661,
+    429,
+    57960,
+    15940,
+    1124,
+    4044,
+    362,
+    284,
+    1124,
+    37018,
+    90,
+    19,
+    15170,
+    20,
+    31716,
+    323,
+    57960,
+    4044,
+    362,
+    366,
+    220,
+    24,
+    15,
+    24884,
+    43298,
+    12947,
+    1096,
+    3363,
+    429,
+    57960,
+    9407,
+    1124,
+    4044,
+    362,
+    284,
+    1124,
+    37018,
+    90,
+    18,
+    15170,
+    20,
+    31716,
+    11,
+    438,
+    57960,
+    15940,
+    61,
+    17,
+    1124,
+    4044,
+    362,
+    488,
+    1124
+  ],
+  "results": [
+    {
+      "index": 0,
+      "token_id": 50,
+      "token": "S",
+      "log_prob": 0.0,
+      "prob": 1.0
+    },
+    {
+      "index": 1,
+      "token_id": 3948,
+      "token": "olve",
+      "log_prob": -1.515625,
+      "prob": 0.2197265625
+    },
+    {
+      "index": 2,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.375,
+      "prob": 0.6875
+    },
+    {
+      "index": 3,
+      "token_id": 2701,
+      "token": "Ġfollowing",
+      "log_prob": -1.1171875,
+      "prob": 0.328125
+    },
+    {
+      "index": 4,
+      "token_id": 6888,
+      "token": "Ġmath",
+      "log_prob": -0.7265625,
+      "prob": 0.484375
+    },
+    {
+      "index": 5,
+      "token_id": 3491,
+      "token": "Ġproblem",
+      "log_prob": -0.000682830810546875,
+      "prob": 1.0
+    },
+    {
+      "index": 6,
+      "token_id": 3019,
+      "token": "Ġstep",
+      "log_prob": -0.000827789306640625,
+      "prob": 1.0
+    },
+    {
+      "index": 7,
+      "token_id": 553,
+      "token": "Ġby",
+      "log_prob": -10.125,
+      "prob": 4.00543212890625e-05
+    },
+    {
+      "index": 8,
+      "token_id": 3019,
+      "token": "Ġstep",
+      "log_prob": -3.039836883544922e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 9,
+      "token_id": 13,
+      "token": ".",
+      "log_prob": -7.375,
+      "prob": 0.0006256103515625
+    },
+    {
+      "index": 10,
+      "token_id": 576,
+      "token": "ĠThe",
+      "log_prob": -1.96875,
+      "prob": 0.1396484375
+    },
+    {
+      "index": 11,
+      "token_id": 1537,
+      "token": "Ġlast",
+      "log_prob": -6.875,
+      "prob": 0.00102996826171875
+    },
+    {
+      "index": 12,
+      "token_id": 1555,
+      "token": "Ġline",
+      "log_prob": -5.6875,
+      "prob": 0.003387451171875
+    },
+    {
+      "index": 13,
+      "token_id": 315,
+      "token": "Ġof",
+      "log_prob": -1.2890625,
+      "prob": 0.275390625
+    },
+    {
+      "index": 14,
+      "token_id": 697,
+      "token": "Ġyour",
+      "log_prob": -7.875,
+      "prob": 0.0003795623779296875
+    },
+    {
+      "index": 15,
+      "token_id": 2033,
+      "token": "Ġresponse",
+      "log_prob": -0.94140625,
+      "prob": 0.390625
+    },
+    {
+      "index": 16,
+      "token_id": 1265,
+      "token": "Ġshould",
+      "log_prob": -0.10107421875,
+      "prob": 0.90234375
+    },
+    {
+      "index": 17,
+      "token_id": 387,
+      "token": "Ġbe",
+      "log_prob": -0.0025787353515625,
+      "prob": 0.99609375
+    },
+    {
+      "index": 18,
+      "token_id": 315,
+      "token": "Ġof",
+      "log_prob": -0.040771484375,
+      "prob": 0.9609375
+    },
+    {
+      "index": 19,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.0005645751953125,
+      "prob": 1.0
+    },
+    {
+      "index": 20,
+      "token_id": 1352,
+      "token": "Ġform",
+      "log_prob": -0.030029296875,
+      "prob": 0.96875
+    },
+    {
+      "index": 21,
+      "token_id": 21806,
+      "token": "ĠAnswer",
+      "log_prob": -6.46875,
+      "prob": 0.00154876708984375
+    },
+    {
+      "index": 22,
+      "token_id": 25,
+      "token": ":",
+      "log_prob": -0.000888824462890625,
+      "prob": 1.0
+    },
+    {
+      "index": 23,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.32421875,
+      "prob": 0.72265625
+    },
+    {
+      "index": 24,
+      "token_id": 16141,
+      "token": "Answer",
+      "log_prob": -17.5,
+      "prob": 2.514570951461792e-08
+    },
+    {
+      "index": 25,
+      "token_id": 320,
+      "token": "Ġ(",
+      "log_prob": -9.8125,
+      "prob": 5.4836273193359375e-05
+    },
+    {
+      "index": 26,
+      "token_id": 28996,
+      "token": "without",
+      "log_prob": -1.0078125,
+      "prob": 0.365234375
+    },
+    {
+      "index": 27,
+      "token_id": 17194,
+      "token": "Ġquotes",
+      "log_prob": -5.4375,
+      "prob": 0.004364013671875
+    },
+    {
+      "index": 28,
+      "token_id": 8,
+      "token": ")",
+      "log_prob": -3.453125,
+      "prob": 0.03173828125
+    },
+    {
+      "index": 29,
+      "token_id": 1380,
+      "token": "Ġwhere",
+      "log_prob": -1.421875,
+      "prob": 0.2412109375
+    },
+    {
+      "index": 30,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -2.40625,
+      "prob": 0.09033203125
+    },
+    {
+      "index": 31,
+      "token_id": 16141,
+      "token": "Answer",
+      "log_prob": -0.10791015625,
+      "prob": 0.8984375
+    },
+    {
+      "index": 32,
+      "token_id": 374,
+      "token": "Ġis",
+      "log_prob": -1.734375,
+      "prob": 0.1767578125
+    },
+    {
+      "index": 33,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -1.9296875,
+      "prob": 0.1455078125
+    },
+    {
+      "index": 34,
+      "token_id": 4226,
+      "token": "Ġanswer",
+      "log_prob": -1.28125,
+      "prob": 0.27734375
+    },
+    {
+      "index": 35,
+      "token_id": 311,
+      "token": "Ġto",
+      "log_prob": -0.181640625,
+      "prob": 0.83203125
+    },
+    {
+      "index": 36,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.0020599365234375,
+      "prob": 0.99609375
+    },
+    {
+      "index": 37,
+      "token_id": 3491,
+      "token": "Ġproblem",
+      "log_prob": -0.48046875,
+      "prob": 0.6171875
+    },
+    {
+      "index": 38,
+      "token_id": 382,
+      "token": ".ĊĊ",
+      "log_prob": -1.1953125,
+      "prob": 0.302734375
+    },
+    {
+      "index": 39,
+      "token_id": 641,
+      "token": "In",
+      "log_prob": -3.703125,
+      "prob": 0.024658203125
+    },
+    {
+      "index": 40,
+      "token_id": 21495,
+      "token": "Ġtriangle",
+      "log_prob": -2.25,
+      "prob": 0.10546875
+    },
+    {
+      "index": 41,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.1220703125,
+      "prob": 0.88671875
+    },
+    {
+      "index": 42,
+      "token_id": 25411,
+      "token": "ABC",
+      "log_prob": -0.1845703125,
+      "prob": 0.83203125
+    },
+    {
+      "index": 43,
+      "token_id": 54876,
+      "token": "$,",
+      "log_prob": -0.416015625,
+      "prob": 0.66015625
+    },
+    {
+      "index": 44,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -2.9375,
+      "prob": 0.052978515625
+    },
+    {
+      "index": 45,
+      "token_id": 15940,
+      "token": "sin",
+      "log_prob": -2.671875,
+      "prob": 0.0693359375
+    },
+    {
+      "index": 46,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -6.53125,
+      "prob": 0.00145721435546875
+    },
+    {
+      "index": 47,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.2353515625,
+      "prob": 0.7890625
+    },
+    {
+      "index": 48,
+      "token_id": 362,
+      "token": "ĠA",
+      "log_prob": -0.0400390625,
+      "prob": 0.9609375
+    },
+    {
+      "index": 49,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.265625,
+      "prob": 0.765625
+    },
+    {
+      "index": 50,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.15234375,
+      "prob": 0.859375
+    },
+    {
+      "index": 51,
+      "token_id": 37018,
+      "token": "frac",
+      "log_prob": -0.0771484375,
+      "prob": 0.92578125
+    },
+    {
+      "index": 52,
+      "token_id": 90,
+      "token": "{",
+      "log_prob": -0.00665283203125,
+      "prob": 0.9921875
+    },
+    {
+      "index": 53,
+      "token_id": 19,
+      "token": "4",
+      "log_prob": -0.74609375,
+      "prob": 0.474609375
+    },
+    {
+      "index": 54,
+      "token_id": 15170,
+      "token": "}{",
+      "log_prob": -0.00921630859375,
+      "prob": 0.9921875
+    },
+    {
+      "index": 55,
+      "token_id": 20,
+      "token": "5",
+      "log_prob": -0.10888671875,
+      "prob": 0.8984375
+    },
+    {
+      "index": 56,
+      "token_id": 31716,
+      "token": "}$",
+      "log_prob": -0.1279296875,
+      "prob": 0.87890625
+    },
+    {
+      "index": 57,
+      "token_id": 323,
+      "token": "Ġand",
+      "log_prob": -0.392578125,
+      "prob": 0.67578125
+    },
+    {
+      "index": 58,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.054443359375,
+      "prob": 0.9453125
+    },
+    {
+      "index": 59,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -2.828125,
+      "prob": 0.05908203125
+    },
+    {
+      "index": 60,
+      "token_id": 362,
+      "token": "ĠA",
+      "log_prob": -0.53125,
+      "prob": 0.5859375
+    },
+    {
+      "index": 61,
+      "token_id": 366,
+      "token": "Ġ<",
+      "log_prob": -2.171875,
+      "prob": 0.11376953125
+    },
+    {
+      "index": 62,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.03564453125,
+      "prob": 0.96484375
+    },
+    {
+      "index": 63,
+      "token_id": 24,
+      "token": "9",
+      "log_prob": -0.030517578125,
+      "prob": 0.96875
+    },
+    {
+      "index": 64,
+      "token_id": 15,
+      "token": "0",
+      "log_prob": -5.984306335449219e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 65,
+      "token_id": 24884,
+      "token": "^\\",
+      "log_prob": -0.0322265625,
+      "prob": 0.96875
+    },
+    {
+      "index": 66,
+      "token_id": 43298,
+      "token": "circ",
+      "log_prob": -0.0002651214599609375,
+      "prob": 1.0
+    },
+    {
+      "index": 67,
+      "token_id": 12947,
+      "token": "$.",
+      "log_prob": -0.068359375,
+      "prob": 0.93359375
+    },
+    {
+      "index": 68,
+      "token_id": 6771,
+      "token": "ĠLet",
+      "log_prob": -4.0625,
+      "prob": 0.0172119140625
+    },
+    {
+      "index": 69,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.111328125,
+      "prob": 0.89453125
+    },
+    {
+      "index": 70,
+      "token_id": 35,
+      "token": "D",
+      "log_prob": -1.2421875,
+      "prob": 0.2890625
+    },
+    {
+      "index": 71,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -0.01556396484375,
+      "prob": 0.984375
+    },
+    {
+      "index": 72,
+      "token_id": 387,
+      "token": "Ġbe",
+      "log_prob": -0.0556640625,
+      "prob": 0.9453125
+    },
+    {
+      "index": 73,
+      "token_id": 264,
+      "token": "Ġa",
+      "log_prob": -0.6171875,
+      "prob": 0.5390625
+    },
+    {
+      "index": 74,
+      "token_id": 1459,
+      "token": "Ġpoint",
+      "log_prob": -0.002044677734375,
+      "prob": 0.99609375
+    },
+    {
+      "index": 75,
+      "token_id": 4889,
+      "token": "Ġoutside",
+      "log_prob": -2.859375,
+      "prob": 0.057373046875
+    },
+    {
+      "index": 76,
+      "token_id": 21495,
+      "token": "Ġtriangle",
+      "log_prob": -0.71484375,
+      "prob": 0.490234375
+    },
+    {
+      "index": 77,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.011962890625,
+      "prob": 0.98828125
+    },
+    {
+      "index": 78,
+      "token_id": 25411,
+      "token": "ABC",
+      "log_prob": -0.003082275390625,
+      "prob": 0.99609375
+    },
+    {
+      "index": 79,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -0.013916015625,
+      "prob": 0.984375
+    },
+    {
+      "index": 80,
+      "token_id": 1741,
+      "token": "Ġsuch",
+      "log_prob": -0.058349609375,
+      "prob": 0.94140625
+    },
+    {
+      "index": 81,
+      "token_id": 429,
+      "token": "Ġthat",
+      "log_prob": -0.00010395050048828125,
+      "prob": 1.0
+    },
+    {
+      "index": 82,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.4296875,
+      "prob": 0.65234375
+    },
+    {
+      "index": 83,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.146484375,
+      "prob": 0.86328125
+    },
+    {
+      "index": 84,
+      "token_id": 47718,
+      "token": "ĠBAD",
+      "log_prob": -1.25,
+      "prob": 0.287109375
+    },
+    {
+      "index": 85,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.05712890625,
+      "prob": 0.9453125
+    },
+    {
+      "index": 86,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.6953125,
+      "prob": 0.498046875
+    },
+    {
+      "index": 87,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.0196533203125,
+      "prob": 0.98046875
+    },
+    {
+      "index": 88,
+      "token_id": 39196,
+      "token": "ĠDAC",
+      "log_prob": -2.078125,
+      "prob": 0.125
+    },
+    {
+      "index": 89,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -0.7109375,
+      "prob": 0.490234375
+    },
+    {
+      "index": 90,
+      "token_id": 323,
+      "token": "Ġand",
+      "log_prob": -0.0238037109375,
+      "prob": 0.9765625
+    },
+    {
+      "index": 91,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.73046875,
+      "prob": 0.482421875
+    },
+    {
+      "index": 92,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.263671875,
+      "prob": 0.76953125
+    },
+    {
+      "index": 93,
+      "token_id": 425,
+      "token": "ĠB",
+      "log_prob": -1.265625,
+      "prob": 0.28125
+    },
+    {
+      "index": 94,
+      "token_id": 5626,
+      "token": "DC",
+      "log_prob": -0.62890625,
+      "prob": 0.53125
+    },
+    {
+      "index": 95,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.033203125,
+      "prob": 0.96875
+    },
+    {
+      "index": 96,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.314453125,
+      "prob": 0.73046875
+    },
+    {
+      "index": 97,
+      "token_id": 24,
+      "token": "9",
+      "log_prob": -1.2109375,
+      "prob": 0.298828125
+    },
+    {
+      "index": 98,
+      "token_id": 15,
+      "token": "0",
+      "log_prob": -0.00147247314453125,
+      "prob": 1.0
+    },
+    {
+      "index": 99,
+      "token_id": 24884,
+      "token": "^\\",
+      "log_prob": -0.0045166015625,
+      "prob": 0.99609375
+    },
+    {
+      "index": 100,
+      "token_id": 43298,
+      "token": "circ",
+      "log_prob": -2.849102020263672e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 101,
+      "token_id": 12947,
+      "token": "$.",
+      "log_prob": -0.046875,
+      "prob": 0.953125
+    },
+    {
+      "index": 102,
+      "token_id": 82610,
+      "token": "ĠSuppose",
+      "log_prob": -4.71875,
+      "prob": 0.0089111328125
+    },
+    {
+      "index": 103,
+      "token_id": 429,
+      "token": "Ġthat",
+      "log_prob": -1.6875,
+      "prob": 0.1845703125
+    },
+    {
+      "index": 104,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.2451171875,
+      "prob": 0.78125
+    },
+    {
+      "index": 105,
+      "token_id": 1808,
+      "token": "AD",
+      "log_prob": -0.84375,
+      "prob": 0.4296875
+    },
+    {
+      "index": 106,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.37109375,
+      "prob": 0.69140625
+    },
+    {
+      "index": 107,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.173828125,
+      "prob": 0.83984375
+    },
+    {
+      "index": 108,
+      "token_id": 16,
+      "token": "1",
+      "log_prob": -0.5859375,
+      "prob": 0.5546875
+    },
+    {
+      "index": 109,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -1.8125,
+      "prob": 0.1630859375
+    },
+    {
+      "index": 110,
+      "token_id": 323,
+      "token": "Ġand",
+      "log_prob": -0.053955078125,
+      "prob": 0.94921875
+    },
+    {
+      "index": 111,
+      "token_id": 429,
+      "token": "Ġthat",
+      "log_prob": -2.609375,
+      "prob": 0.07373046875
+    },
+    {
+      "index": 112,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -1.4765625,
+      "prob": 0.228515625
+    },
+    {
+      "index": 113,
+      "token_id": 37018,
+      "token": "frac",
+      "log_prob": -2.609375,
+      "prob": 0.07373046875
+    },
+    {
+      "index": 114,
+      "token_id": 90,
+      "token": "{",
+      "log_prob": -0.056884765625,
+      "prob": 0.9453125
+    },
+    {
+      "index": 115,
+      "token_id": 9548,
+      "token": "BD",
+      "log_prob": -0.5625,
+      "prob": 0.5703125
+    },
+    {
+      "index": 116,
+      "token_id": 15170,
+      "token": "}{",
+      "log_prob": -0.0439453125,
+      "prob": 0.95703125
+    },
+    {
+      "index": 117,
+      "token_id": 6484,
+      "token": "CD",
+      "log_prob": -0.0947265625,
+      "prob": 0.91015625
+    },
+    {
+      "index": 118,
+      "token_id": 92,
+      "token": "}",
+      "log_prob": -0.10546875,
+      "prob": 0.8984375
+    },
+    {
+      "index": 119,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.03076171875,
+      "prob": 0.96875
+    },
+    {
+      "index": 120,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.2890625,
+      "prob": 0.75
+    },
+    {
+      "index": 121,
+      "token_id": 37018,
+      "token": "frac",
+      "log_prob": -0.05419921875,
+      "prob": 0.9453125
+    },
+    {
+      "index": 122,
+      "token_id": 90,
+      "token": "{",
+      "log_prob": -0.01239013671875,
+      "prob": 0.98828125
+    },
+    {
+      "index": 123,
+      "token_id": 18,
+      "token": "3",
+      "log_prob": -0.76953125,
+      "prob": 0.462890625
+    },
+    {
+      "index": 124,
+      "token_id": 15170,
+      "token": "}{",
+      "log_prob": -0.026611328125,
+      "prob": 0.97265625
+    },
+    {
+      "index": 125,
+      "token_id": 17,
+      "token": "2",
+      "log_prob": -0.76953125,
+      "prob": 0.462890625
+    },
+    {
+      "index": 126,
+      "token_id": 92,
+      "token": "}",
+      "log_prob": -0.04248046875,
+      "prob": 0.95703125
+    },
+    {
+      "index": 127,
+      "token_id": 12947,
+      "token": "$.",
+      "log_prob": -0.022705078125,
+      "prob": 0.9765625
+    },
+    {
+      "index": 128,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -3.53125,
+      "prob": 0.029296875
+    },
+    {
+      "index": 129,
+      "token_id": 7379,
+      "token": "ĠFind",
+      "log_prob": -0.625,
+      "prob": 0.53515625
+    },
+    {
+      "index": 130,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.81640625,
+      "prob": 0.44140625
+    },
+    {
+      "index": 131,
+      "token_id": 6484,
+      "token": "CD",
+      "log_prob": -0.78515625,
+      "prob": 0.455078125
+    },
+    {
+      "index": 132,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -0.451171875,
+      "prob": 0.63671875
+    },
+    {
+      "index": 133,
+      "token_id": 624,
+      "token": ".Ċ",
+      "log_prob": -0.421875,
+      "prob": 0.65625
+    },
+    {
+      "index": 134,
+      "token_id": 8304,
+      "token": "Step",
+      "log_prob": -0.6484375,
+      "prob": 0.5234375
+    },
+    {
+      "index": 135,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.00133514404296875,
+      "prob": 1.0
+    },
+    {
+      "index": 136,
+      "token_id": 16,
+      "token": "1",
+      "log_prob": -3.0994415283203125e-06,
+      "prob": 1.0
+    },
+    {
+      "index": 137,
+      "token_id": 25,
+      "token": ":",
+      "log_prob": -7.82012939453125e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 138,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.123046875,
+      "prob": 0.8828125
+    },
+    {
+      "index": 139,
+      "token_id": 2014,
+      "token": "ĠTo",
+      "log_prob": -0.7578125,
+      "prob": 0.46875
+    },
+    {
+      "index": 140,
+      "token_id": 11625,
+      "token": "Ġsolve",
+      "log_prob": -0.404296875,
+      "prob": 0.66796875
+    },
+    {
+      "index": 141,
+      "token_id": 419,
+      "token": "Ġthis",
+      "log_prob": -0.486328125,
+      "prob": 0.61328125
+    },
+    {
+      "index": 142,
+      "token_id": 3491,
+      "token": "Ġproblem",
+      "log_prob": -0.0068359375,
+      "prob": 0.9921875
+    },
+    {
+      "index": 143,
+      "token_id": 11,
+      "token": ",",
+      "log_prob": -0.00171661376953125,
+      "prob": 1.0
+    },
+    {
+      "index": 144,
+      "token_id": 582,
+      "token": "Ġwe",
+      "log_prob": -0.05029296875,
+      "prob": 0.94921875
+    },
+    {
+      "index": 145,
+      "token_id": 1184,
+      "token": "Ġneed",
+      "log_prob": -0.79296875,
+      "prob": 0.453125
+    },
+    {
+      "index": 146,
+      "token_id": 311,
+      "token": "Ġto",
+      "log_prob": -0.000583648681640625,
+      "prob": 1.0
+    },
+    {
+      "index": 147,
+      "token_id": 990,
+      "token": "Ġuse",
+      "log_prob": -0.98828125,
+      "prob": 0.373046875
+    },
+    {
+      "index": 148,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.69140625,
+      "prob": 0.5
+    },
+    {
+      "index": 149,
+      "token_id": 2661,
+      "token": "Ġgiven",
+      "log_prob": -0.435546875,
+      "prob": 0.6484375
+    },
+    {
+      "index": 150,
+      "token_id": 1995,
+      "token": "Ġinformation",
+      "log_prob": -0.1162109375,
+      "prob": 0.890625
+    },
+    {
+      "index": 151,
+      "token_id": 911,
+      "token": "Ġabout",
+      "log_prob": -0.828125,
+      "prob": 0.4375
+    },
+    {
+      "index": 152,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.240234375,
+      "prob": 0.78515625
+    },
+    {
+      "index": 153,
+      "token_id": 21495,
+      "token": "Ġtriangle",
+      "log_prob": -0.5546875,
+      "prob": 0.57421875
+    },
+    {
+      "index": 154,
+      "token_id": 323,
+      "token": "Ġand",
+      "log_prob": -0.57421875,
+      "prob": 0.5625
+    },
+    {
+      "index": 155,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.314453125,
+      "prob": 0.73046875
+    },
+    {
+      "index": 156,
+      "token_id": 1459,
+      "token": "Ġpoint",
+      "log_prob": -0.72265625,
+      "prob": 0.486328125
+    },
+    {
+      "index": 157,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.9921875,
+      "prob": 0.37109375
+    },
+    {
+      "index": 158,
+      "token_id": 35,
+      "token": "D",
+      "log_prob": -0.00225830078125,
+      "prob": 0.99609375
+    },
+    {
+      "index": 159,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -0.0478515625,
+      "prob": 0.953125
+    },
+    {
+      "index": 160,
+      "token_id": 311,
+      "token": "Ġto",
+      "log_prob": -0.251953125,
+      "prob": 0.77734375
+    },
+    {
+      "index": 161,
+      "token_id": 1477,
+      "token": "Ġfind",
+      "log_prob": -0.2314453125,
+      "prob": 0.79296875
+    },
+    {
+      "index": 162,
+      "token_id": 279,
+      "token": "Ġthe",
+      "log_prob": -0.0228271484375,
+      "prob": 0.9765625
+    },
+    {
+      "index": 163,
+      "token_id": 3084,
+      "token": "Ġlength",
+      "log_prob": -0.353515625,
+      "prob": 0.703125
+    },
+    {
+      "index": 164,
+      "token_id": 315,
+      "token": "Ġof",
+      "log_prob": -0.018310546875,
+      "prob": 0.98046875
+    },
+    {
+      "index": 165,
+      "token_id": 400,
+      "token": "Ġ$",
+      "log_prob": -0.031982421875,
+      "prob": 0.96875
+    },
+    {
+      "index": 166,
+      "token_id": 6484,
+      "token": "CD",
+      "log_prob": -0.00653076171875,
+      "prob": 0.9921875
+    },
+    {
+      "index": 167,
+      "token_id": 3,
+      "token": "$",
+      "log_prob": -0.2109375,
+      "prob": 0.80859375
+    },
+    {
+      "index": 168,
+      "token_id": 624,
+      "token": ".Ċ",
+      "log_prob": -0.01513671875,
+      "prob": 0.984375
+    },
+    {
+      "index": 169,
+      "token_id": 8304,
+      "token": "Step",
+      "log_prob": -1.2040138244628906e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 170,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": 0.0,
+      "prob": 1.0
+    },
+    {
+      "index": 171,
+      "token_id": 17,
+      "token": "2",
+      "log_prob": -1.621246337890625e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 172,
+      "token_id": 25,
+      "token": ":",
+      "log_prob": -3.4332275390625e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 173,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.00141143798828125,
+      "prob": 1.0
+    },
+    {
+      "index": 174,
+      "token_id": 1205,
+      "token": "ĠWe",
+      "log_prob": -0.60546875,
+      "prob": 0.546875
+    },
+    {
+      "index": 175,
+      "token_id": 525,
+      "token": "Ġare",
+      "log_prob": -0.703125,
+      "prob": 0.494140625
+    },
+    {
+      "index": 176,
+      "token_id": 2661,
+      "token": "Ġgiven",
+      "log_prob": -0.043212890625,
+      "prob": 0.95703125
+    },
+    {
+      "index": 177,
+      "token_id": 429,
+      "token": "Ġthat",
+      "log_prob": -0.09521484375,
+      "prob": 0.91015625
+    },
+    {
+      "index": 178,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.0966796875,
+      "prob": 0.90625
+    },
+    {
+      "index": 179,
+      "token_id": 15940,
+      "token": "sin",
+      "log_prob": -0.059326171875,
+      "prob": 0.94140625
+    },
+    {
+      "index": 180,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.032958984375,
+      "prob": 0.96875
+    },
+    {
+      "index": 181,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.0003223419189453125,
+      "prob": 1.0
+    },
+    {
+      "index": 182,
+      "token_id": 362,
+      "token": "ĠA",
+      "log_prob": -0.0019073486328125,
+      "prob": 1.0
+    },
+    {
+      "index": 183,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.00299072265625,
+      "prob": 0.99609375
+    },
+    {
+      "index": 184,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.001953125,
+      "prob": 1.0
+    },
+    {
+      "index": 185,
+      "token_id": 37018,
+      "token": "frac",
+      "log_prob": -0.00046539306640625,
+      "prob": 1.0
+    },
+    {
+      "index": 186,
+      "token_id": 90,
+      "token": "{",
+      "log_prob": -0.0014495849609375,
+      "prob": 1.0
+    },
+    {
+      "index": 187,
+      "token_id": 19,
+      "token": "4",
+      "log_prob": -0.00054931640625,
+      "prob": 1.0
+    },
+    {
+      "index": 188,
+      "token_id": 15170,
+      "token": "}{",
+      "log_prob": -2.8252601623535156e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 189,
+      "token_id": 20,
+      "token": "5",
+      "log_prob": -2.3484230041503906e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 190,
+      "token_id": 31716,
+      "token": "}$",
+      "log_prob": -0.01513671875,
+      "prob": 0.984375
+    },
+    {
+      "index": 191,
+      "token_id": 323,
+      "token": "Ġand",
+      "log_prob": -0.2177734375,
+      "prob": 0.8046875
+    },
+    {
+      "index": 192,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.197265625,
+      "prob": 0.8203125
+    },
+    {
+      "index": 193,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.0086669921875,
+      "prob": 0.9921875
+    },
+    {
+      "index": 194,
+      "token_id": 362,
+      "token": "ĠA",
+      "log_prob": -0.01239013671875,
+      "prob": 0.98828125
+    },
+    {
+      "index": 195,
+      "token_id": 366,
+      "token": "Ġ<",
+      "log_prob": -0.0084228515625,
+      "prob": 0.9921875
+    },
+    {
+      "index": 196,
+      "token_id": 220,
+      "token": "Ġ",
+      "log_prob": -0.00019168853759765625,
+      "prob": 1.0
+    },
+    {
+      "index": 197,
+      "token_id": 24,
+      "token": "9",
+      "log_prob": -4.410743713378906e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 198,
+      "token_id": 15,
+      "token": "0",
+      "log_prob": -5.364418029785156e-06,
+      "prob": 1.0
+    },
+    {
+      "index": 199,
+      "token_id": 24884,
+      "token": "^\\",
+      "log_prob": -0.01513671875,
+      "prob": 0.984375
+    },
+    {
+      "index": 200,
+      "token_id": 43298,
+      "token": "circ",
+      "log_prob": -2.574920654296875e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 201,
+      "token_id": 12947,
+      "token": "$.",
+      "log_prob": -0.71484375,
+      "prob": 0.490234375
+    },
+    {
+      "index": 202,
+      "token_id": 1096,
+      "token": "ĠThis",
+      "log_prob": -0.609375,
+      "prob": 0.54296875
+    },
+    {
+      "index": 203,
+      "token_id": 3363,
+      "token": "Ġmeans",
+      "log_prob": -1.03125,
+      "prob": 0.357421875
+    },
+    {
+      "index": 204,
+      "token_id": 429,
+      "token": "Ġthat",
+      "log_prob": -0.28125,
+      "prob": 0.75390625
+    },
+    {
+      "index": 205,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.27734375,
+      "prob": 0.7578125
+    },
+    {
+      "index": 206,
+      "token_id": 9407,
+      "token": "cos",
+      "log_prob": -0.4921875,
+      "prob": 0.609375
+    },
+    {
+      "index": 207,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.0218505859375,
+      "prob": 0.9765625
+    },
+    {
+      "index": 208,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.0003604888916015625,
+      "prob": 1.0
+    },
+    {
+      "index": 209,
+      "token_id": 362,
+      "token": "ĠA",
+      "log_prob": -0.00555419921875,
+      "prob": 0.99609375
+    },
+    {
+      "index": 210,
+      "token_id": 284,
+      "token": "Ġ=",
+      "log_prob": -0.05810546875,
+      "prob": 0.9453125
+    },
+    {
+      "index": 211,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.0034027099609375,
+      "prob": 0.99609375
+    },
+    {
+      "index": 212,
+      "token_id": 37018,
+      "token": "frac",
+      "log_prob": -0.26171875,
+      "prob": 0.76953125
+    },
+    {
+      "index": 213,
+      "token_id": 90,
+      "token": "{",
+      "log_prob": -0.0162353515625,
+      "prob": 0.984375
+    },
+    {
+      "index": 214,
+      "token_id": 18,
+      "token": "3",
+      "log_prob": -0.0037689208984375,
+      "prob": 0.99609375
+    },
+    {
+      "index": 215,
+      "token_id": 15170,
+      "token": "}{",
+      "log_prob": -0.00011014938354492188,
+      "prob": 1.0
+    },
+    {
+      "index": 216,
+      "token_id": 20,
+      "token": "5",
+      "log_prob": -0.000301361083984375,
+      "prob": 1.0
+    },
+    {
+      "index": 217,
+      "token_id": 31716,
+      "token": "}$",
+      "log_prob": -0.10107421875,
+      "prob": 0.90234375
+    },
+    {
+      "index": 218,
+      "token_id": 11,
+      "token": ",",
+      "log_prob": -1.4140625,
+      "prob": 0.2431640625
+    },
+    {
+      "index": 219,
+      "token_id": 438,
+      "token": "Ġas",
+      "log_prob": -0.72265625,
+      "prob": 0.486328125
+    },
+    {
+      "index": 220,
+      "token_id": 57960,
+      "token": "Ġ$\\",
+      "log_prob": -0.59765625,
+      "prob": 0.55078125
+    },
+    {
+      "index": 221,
+      "token_id": 15940,
+      "token": "sin",
+      "log_prob": -0.173828125,
+      "prob": 0.83984375
+    },
+    {
+      "index": 222,
+      "token_id": 61,
+      "token": "^",
+      "log_prob": -0.022216796875,
+      "prob": 0.9765625
+    },
+    {
+      "index": 223,
+      "token_id": 17,
+      "token": "2",
+      "log_prob": -1.9073486328125e-05,
+      "prob": 1.0
+    },
+    {
+      "index": 224,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.126953125,
+      "prob": 0.87890625
+    },
+    {
+      "index": 225,
+      "token_id": 4044,
+      "token": "angle",
+      "log_prob": -0.265625,
+      "prob": 0.765625
+    },
+    {
+      "index": 226,
+      "token_id": 362,
+      "token": "ĠA",
+      "log_prob": -0.00138092041015625,
+      "prob": 1.0
+    },
+    {
+      "index": 227,
+      "token_id": 488,
+      "token": "Ġ+",
+      "log_prob": -0.003448486328125,
+      "prob": 0.99609375
+    },
+    {
+      "index": 228,
+      "token_id": 1124,
+      "token": "Ġ\\",
+      "log_prob": -0.00087738037109375,
+      "prob": 1.0
+    }
+  ],
+  "kv_cache_info": {
+    "num_layers": 36,
+    "saved_to": "kv_cache.pt"
+  }
+}
